@@ -7,6 +7,7 @@ import { Awards } from "@/components/sections/Awards";
 import { LeaderBio } from "@/components/sections/LeaderBio";
 import { ProgramDetail } from "@/components/sections/ProgramDetail";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { VideoInsights } from "@/components/sections/VideoInsights";
 import { LeadMagnet } from "@/components/sections/LeadMagnet";
 import { NewsGrid } from "@/components/sections/NewsGrid";
 import { Footer } from "@/components/layout/Footer";
@@ -23,6 +24,7 @@ function App() {
       <LeaderBio />
       <ProgramDetail />
       <Testimonials />
+      <VideoInsights />
       <LeadMagnet />
       <NewsGrid />
       <Footer />
