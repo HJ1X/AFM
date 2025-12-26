@@ -1,9 +1,11 @@
-// Import logos 
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import forbes from "@/assets/forbes.png";
 import cnn from "@/assets/cnn.png";
 import benzinga from "@/assets/benzinga.png";
 import investopedia from "@/assets/investopedia.png";
 import yahoo from "@/assets/yahoo-finance.png";
+import entrepreneur from "@/assets/entrepreneur.png";
+import nbc from "@/assets/nbc.png";
 
 const testimonials = [
     { image: forbes, name: "Forbes" },
@@ -11,28 +13,27 @@ const testimonials = [
     { image: benzinga, name: "Benzinga" },
     { image: investopedia, name: "Investopedia" },
     { image: yahoo, name: "Yahoo Finance" },
+    { image: entrepreneur, name: "Entrepreneur" },
+    { image: nbc, name: "NBC" },
 ];
 
 export const TrustBar = () => {
     return (
-        <div className="bg-neutral-950 border-y border-neutral-900/50 py-12 relative z-20">
-            <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-8 md:gap-16">
-                <div className="shrink-0 text-center md:text-left">
-                    <span className="text-neutral-500 font-medium text-sm">
-                        Featured in major <br className="hidden md:block" /> financial media
+        <div className="bg-neutral-50 border-y border-neutral-200 py-6 overflow-hidden">
+            <div className="max-w-[1400px] mx-auto px-6 flex items-center gap-12">
+                <div className="hidden md:block shrink-0 border-r border-neutral-300 pr-8">
+                    <span className="text-xs font-bold tracking-widest text-neutral-400 uppercase">
+                        Featured In
                     </span>
                 </div>
 
-                <div className="w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
-                    <div className="flex gap-12 items-center justify-center md:justify-start opacity-40 grayscale mix-blend-screen">
-                        {/* Reusing existing logic but simpler layout inline if possible, or using component with grayscale forced */}
-                        {testimonials.map((brand, i) => (
-                            <img key={i} src={brand.image} alt={brand.name} className="h-6 md:h-8 w-auto object-contain" />
-                        ))}
-                        {testimonials.map((brand, i) => (
-                            <img key={i + 'dup'} src={brand.image} alt={brand.name} className="h-6 md:h-8 w-auto object-contain hidden md:block" />
-                        ))}
-                    </div>
+                <div className="w-full relative flex h-16 items-center">
+                    <InfiniteMovingCards
+                        items={testimonials}
+                        direction="left"
+                        speed="slow"
+                        className="w-full bg-transparent"
+                    />
                 </div>
             </div>
         </div>

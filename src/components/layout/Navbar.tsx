@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Search, Menu, X } from "lucide-react";
+import logo from "@/assets/afm-logo.png";
 
 const navItems = [
     { name: "Our Firm", link: "#firm" },
@@ -28,9 +29,7 @@ export const Navbar = () => {
 
                     {/* Logo */}
                     <div className="flex items-center gap-3 cursor-pointer">
-                        <div className="h-10 w-10 bg-corporate-blue flex items-center justify-center text-white font-serif font-bold text-xl rounded-sm">
-                            A
-                        </div>
+                        <img src={logo} alt="Asia Forex Mentor" className="h-12 w-auto object-contain" />
                         <div className="flex flex-col">
                             <span className="font-serif font-bold text-xl tracking-tight text-corporate-blue leading-none">ASIA FOREX</span>
                             <span className="font-sans text-[10px] tracking-[0.2em] text-neutral-500 uppercase">Mentor</span>

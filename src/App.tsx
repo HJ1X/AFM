@@ -1,8 +1,13 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
-import { StatsBar } from "@/components/sections/StatsBar";
-import { NewsGrid } from "@/components/sections/NewsGrid";
+import { TrustBar } from "@/components/sections/TrustBar";
+import { InstitutionalCredibility } from "@/components/sections/InstitutionalCredibility";
+import { Awards } from "@/components/sections/Awards";
 import { LeaderBio } from "@/components/sections/LeaderBio";
+import { ProgramDetail } from "@/components/sections/ProgramDetail";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { LeadMagnet } from "@/components/sections/LeadMagnet";
+import { NewsGrid } from "@/components/sections/NewsGrid";
 import { Footer } from "@/components/layout/Footer";
 
 function App() {
@@ -10,8 +15,13 @@ function App() {
     <div className="min-h-screen bg-white text-corporate-blue">
       <Navbar />
       <Hero />
-      <StatsBar />
+      <TrustBar />
+      <InstitutionalCredibility />
+      <Awards />
       <LeaderBio />
+      <ProgramDetail />
+      <Testimonials />
+      <LeadMagnet />
       <NewsGrid />
       <Footer />
     </div>
